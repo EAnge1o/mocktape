@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mocktape — live traffic</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📼</text></svg>" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">📼</span>
+        <span class="name">mocktape</span>
+        <span id="mode" class="badge mode">dev</span>
+        <span id="conn" class="conn" title="live feed">●</span>
+      </div>
+      <div class="stats" id="stats">
+        <div class="stat"><span class="stat-label">requests</span><span class="stat-value" id="stat-total">0</span></div>
+        <div class="stat"><span class="stat-label">miss</span><span class="stat-value miss" id="stat-miss">0</span></div>
+        <div class="stat"><span class="stat-label">avg</span><span class="stat-value" id="stat-avg">0ms</span></div>
+        <div class="stat"><span class="stat-label">p95</span><span class="stat-value" id="stat-p95">0ms</span></div>
+        <div class="stat"><span class="stat-label">uptime</span><span class="stat-value" id="stat-uptime">0s</span></div>
+      </div>
+      <button id="reset" class="btn" title="POST /__mocktape__/reset">Reset state</button>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <section>
+          <h2>Resources</h2>
+          <ul id="resources" class="list"></ul>
+        </section>
+        <section>
+          <h2>Scenarios</h2>
+          <div id="scenarios" class="scenarios"></div>
+          <p class="hint" id="scenarios-hint" hidden>
+            Routes with <code>scenarios</code> appear here. You can also flip states per-request with the
+            <code>x-mocktape-scenario</code> header.
+          </p>
+        </section>
+        <section>
+          <h2>Routes</h2>
+          <ul id="routes" class="list mono"></ul>
+        </section>
+      </aside>
+
+      <section class="traffic">
+        <table class="requests">
+          <thead>
+            <tr>
+              <th>time</th>
+              <th>method</th>
+              <th>path</th>
+              <th>status</th>
+              <th>latency</th>
+              <th>source</th>
+              <th>origin</th>
+            </tr>
+          </thead>
+          <tbody id="requests"></tbody>
+        </table>
+        <p id="empty" class="empty">Waiting for traffic… hit your mock API and rows will appear here live.</p>
+      </section>
+    </main>
+
+    <aside id="drawer" class="drawer" hidden>
+      <header class="drawer-head">
+        <h3 id="drawer-title">request</h3>
+        <button id="drawer-close" class="btn">Close</button>
+      </header>
+      <div id="drawer-body" class="drawer-body"></div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
