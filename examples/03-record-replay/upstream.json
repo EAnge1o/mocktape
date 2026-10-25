@@ -1,0 +1,18 @@
+# The "real" upstream API we'll record against.
+# In real life this would be https://api.github.com or your backend.
+port: 4100
+dashboard: { enabled: false }
+routes:
+  - name: repo
+    method: GET
+    path: /repos/:owner/:repo
+    body:
+      fullName: "{{ request.path.owner }}/{{ request.path.repo }}"
+      stars: 42
+      license: MIT
+  - name: issues
+    method: GET
+    path: /repos/:owner/:repo/issues
+    body:
+      - { id: 1, title: "first issue", open: true }
+      - { id: 2, title: "second issue", open: false }

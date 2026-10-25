@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="140" viewBox="0 0 560 140">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5b83d"/>
+      <stop offset="1" stop-color="#f2883d"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="557" height="137" rx="16" fill="url(#bg)" stroke="#2d333b" stroke-width="1.5"/>
+
+  <!-- cassette body -->
+  <rect x="42" y="34" width="84" height="60" rx="7" fill="#1c2330" stroke="#f5b83d" stroke-width="2.5"/>
+  <rect x="56" y="46" width="56" height="24" rx="4" fill="#0d1117" stroke="#f5b83d" stroke-width="1.5"/>
+  <circle cx="66" cy="58" r="6" fill="none" stroke="#f5b83d" stroke-width="2"/>
+  <circle cx="102" cy="58" r="6" fill="none" stroke="#f5b83d" stroke-width="2"/>
+  <path d="M 72 58 H 96" stroke="#f5b83d" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="70" cy="84" r="2.6" fill="#f5b83d"/>
+  <circle cx="84" cy="84" r="2.6" fill="#f5b83d"/>
+  <circle cx="98" cy="84" r="2.6" fill="#f5b83d"/>
+  <!-- tape label lines -->
+  <rect x="58" y="50" width="24" height="3.5" rx="1.5" fill="#f5b83d" opacity="0.55"/>
+
+  <!-- wordmark -->
+  <text x="152" y="76" font-family="'JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="40" font-weight="700" fill="#e6edf3">mock<tspan fill="url(#accent)">tape</tspan></text>
+  <text x="154" y="102" font-family="'JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13.5" fill="#8b949e">record real APIs. replay anywhere.</text>
+</svg>

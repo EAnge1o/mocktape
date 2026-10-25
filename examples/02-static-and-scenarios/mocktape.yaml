@@ -1,0 +1,34 @@
+port: 3000
+routes:
+  - name: user profile
+    method: GET
+    path: /users/:id/profile
+    body:
+      userId: "{{ request.path.id }}"
+      requestedAt: "{{ $isoTimestamp }}"
+      traceId: "{{ $uuid }}"
+
+  - name: login
+    method: POST
+    path: /auth/login
+    scenarios:
+      default: { status: 200, body: { token: "{{ $uuid }}", expiresIn: 3600 } }
+      bad-password: { status: 401, body: { error: "invalid_credentials" } }
+      locked: { status: 423, body: { error: "account_locked" } }
+
+  - name: search (predicate-matched)
+    method: GET
+    path: /search
+    when: { query: { type: "users" } }
+    body: { results: ["only for ?type=users"] }
+
+  - name: search (fallback)
+    method: GET
+    path: /search
+    body: { results: [] }
+
+  - name: slow report
+    method: GET
+    path: /reports
+    delay: [200, 600]
+    body: { generatedAt: "{{ $isoTimestamp }}" }

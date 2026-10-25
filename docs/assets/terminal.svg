@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420" font-family="'JetBrains Mono','Cascadia Code',Consolas,Menlo,monospace">
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3140"/>
+      <stop offset="1" stop-color="#222834"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="860" height="420" rx="12" fill="#0d1117" stroke="#2d333b" stroke-width="1.5"/>
+  <rect x="0" y="0" width="860" height="34" rx="12" fill="url(#chrome)"/>
+  <rect x="0" y="22" width="860" height="12" fill="url(#chrome)"/>
+  <circle cx="22" cy="17" r="6" fill="#f85149"/>
+  <circle cx="42" cy="17" r="6" fill="#d29922"/>
+  <circle cx="62" cy="17" r="6" fill="#3fb950"/>
+  <text x="430" y="22" text-anchor="middle" fill="#8b949e" font-size="12">mocktape dev — zsh</text>
+
+  <g font-size="12.5">
+    <!-- prompt + start -->
+    <text x="20" y="64"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> mocktape dev</tspan></text>
+    <text x="20" y="86"><tspan fill="#39c5cf">ℹ</tspan><tspan fill="#8b949e"> config: mocktape.json   </tspan><tspan fill="#39c5cf">ℹ</tspan><tspan fill="#8b949e"> dashboard: </tspan><tspan fill="#e6edf3">http://localhost:3001</tspan></text>
+
+    <!-- request lines -->
+    <g>
+      <text x="20" y="118"><tspan fill="#8b949e">20:48:12 ▶ </tspan><tspan fill="#3fb950" font-weight="bold">GET</tspan><tspan fill="#e6edf3" font-weight="bold"> /users</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" font-weight="bold">200</tspan><tspan fill="#8b949e"> (3ms) resource [users]</tspan></text>
+      <text x="20" y="140"><tspan fill="#8b949e">20:48:12 ▶ </tspan><tspan fill="#3fb950" font-weight="bold">GET</tspan><tspan fill="#e6edf3" font-weight="bold"> /users</tspan><tspan fill="#8b949e">?role=admin → </tspan><tspan fill="#3fb950" font-weight="bold">200</tspan><tspan fill="#8b949e"> (0ms) resource [users]</tspan></text>
+      <text x="20" y="162"><tspan fill="#8b949e">20:48:12 ▶ </tspan><tspan fill="#39c5cf" font-weight="bold">POST</tspan><tspan fill="#e6edf3" font-weight="bold"> /users</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" font-weight="bold">201</tspan><tspan fill="#8b949e"> (1ms) resource [users]</tspan></text>
+      <text x="20" y="184"><tspan fill="#8b949e">20:48:12 ▶ </tspan><tspan fill="#d29922" font-weight="bold">DELETE</tspan><tspan fill="#e6edf3" font-weight="bold"> /posts/2</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" font-weight="bold">204</tspan><tspan fill="#8b949e"> (0ms) resource [posts]</tspan></text>
+      <text x="20" y="206"><tspan fill="#8b949e">20:48:12 ▶ </tspan><tspan fill="#3fb950" font-weight="bold">GET</tspan><tspan fill="#e6edf3" font-weight="bold"> /unknown-endpoint</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#d29922" font-weight="bold">404</tspan><tspan fill="#8b949e"> (0ms) </tspan><tspan fill="#f85149" font-weight="bold">MISS</tspan></text>
+      <text x="38" y="228"><tspan fill="#f85149">closest match</tspan><tspan fill="#8b949e">: GET /orders (61% similar)</tspan></text>
+    </g>
+
+    <!-- record / replay section -->
+    <text x="20" y="266"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> mocktape record --upstream https://api.example.com</tspan></text>
+    <text x="20" y="288"><tspan fill="#8b949e">  Recording from </tspan><tspan fill="#e6edf3" font-weight="bold">https://api.example.com</tspan><tspan fill="#8b949e">  →  cassettes/cassette-2026-10-25.yaml</tspan></text>
+    <text x="20" y="310"><tspan fill="#8b949e">20:49:03 ▶ </tspan><tspan fill="#3fb950" font-weight="bold">GET</tspan><tspan fill="#e6edf3" font-weight="bold"> /repos/acme/widget</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" font-weight="bold">200</tspan><tspan fill="#8b949e"> (86ms) </tspan><tspan fill="#bc8cff">proxy</tspan></text>
+
+    <text x="20" y="348"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> mocktape replay cassettes   </tspan><tspan fill="#8b949e"># offline, zero network</tspan></text>
+    <text x="20" y="370"><tspan fill="#8b949e">  Replaying </tspan><tspan fill="#e6edf3" font-weight="bold">cassettes</tspan><tspan fill="#8b949e"> — 128 interactions</tspan></text>
+    <text x="20" y="392"><tspan fill="#8b949e">20:51:40 ▶ </tspan><tspan fill="#3fb950" font-weight="bold">GET</tspan><tspan fill="#e6edf3" font-weight="bold"> /repos/acme/widget</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" font-weight="bold">200</tspan><tspan fill="#8b949e"> (0ms) </tspan><tspan fill="#39c5cf">replay</tspan><tspan fill="#8b949e"> [7f3c…]</tspan></text>
+  </g>
+</svg>
