@@ -1,0 +1,89 @@
+{
+  "name": "mocktape",
+  "version": "1.0.0",
+  "description": "A mock API server for frontend and integration testing: declarative CRUD from one file, record & replay real APIs as cassettes, fault injection, and a live traffic dashboard.",
+  "license": "MIT",
+  "author": "Mocktape contributors",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "mocktape": "dist/bin.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "mock",
+    "api",
+    "server",
+    "stub",
+    "fake",
+    "http",
+    "rest",
+    "crud",
+    "record",
+    "replay",
+    "vcr",
+    "cassette",
+    "testing",
+    "frontend",
+    "cli",
+    "developer-tools"
+  ],
+  "scripts": {
+    "dev": "tsx src/cli.ts dev",
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-assets.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EAnge1o/mocktape.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EAnge1o/mocktape/issues"
+  },
+  "homepage": "https://github.com/EAnge1o/mocktape#readme",
+  "dependencies": {
+    "chokidar": "^6.0.0",
+    "commander": "^15.0.0",
+    "path-to-regexp": "^9.0.0",
+    "picocolors": "^1.1.1",
+    "ws": "^8.22.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "@types/ws": "^8.18.2",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}
