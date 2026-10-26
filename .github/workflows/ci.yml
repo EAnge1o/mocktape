@@ -58,6 +58,6 @@ jobs:
           sleep 2
           curl -sf http://127.0.0.1:3123/users | grep -q "Ada" || { cat server.log; exit 1; }
           curl -sf -X POST http://127.0.0.1:3123/__mocktape__/reset > /dev/null
-          curl -sf http://127.0.0.1:3123/__mocktape__/health | grep -q '"ok":true' || { cat server.log; exit 1; }
+          curl -sf http://127.0.0.1:3123/__mocktape__/health | grep -q '"ok": *true' || { cat server.log; exit 1; }
           kill $SERVER_PID
           echo "smoke test passed"
