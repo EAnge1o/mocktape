@@ -17,6 +17,8 @@
 
 ---
 
+<img src="docs/assets/terminal.gif" alt="mocktape 终端演示 —— init、dev、record、replay" width="760" />
+
 `mocktape` 是一个面向前端联调与集成测试的 Mock API 服务器。一个配置文件即可生成完整的
 CRUD 接口;一次录制即可把任意真实 API 固化成可回放的"磁带";整个核心直接构建在
 `node:http` 上,运行时依赖只有 7 个小包。

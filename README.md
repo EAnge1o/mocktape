@@ -13,7 +13,7 @@
 
 [Quick start](#quick-start) · [Record & replay](#record--replay) · [Dashboard](#the-dashboard) · [In tests](#in-tests) · [Why](#why-mocktape) · [中文文档](README.zh-CN.md)
 
-<img src="docs/assets/terminal.svg" alt="mocktape in the terminal" width="720" />
+<img src="docs/assets/terminal.gif" alt="mocktape in the terminal — init, dev, record, replay" width="760" />
 
 *The live dashboard — every request, matched or not, with miss diagnostics:*
 
