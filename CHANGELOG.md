@@ -5,6 +5,13 @@ All notable changes to this project are documented here. The format follows
 by [release-please](https://github.com/googleapis/release-please) from
 Conventional Commits.
 
+## 1.0.0 (2026-10-26)
+
+
+### Features
+
+* mock engine, tape recorder/replay, live dashboard and CLI ([27b0778](https://github.com/EAnge1o/mocktape/commit/27b07780a05777e0ae61d084f483a001a1c48d9c))
+
 ## 1.0.0 — 2026-10-25
 
 Initial release.
