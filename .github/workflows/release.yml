@@ -20,6 +20,9 @@ jobs:
         id: release
         with:
           release-type: node
+          # GITHUB_TOKEN cannot create PRs unless the repo setting is enabled;
+          # a PAT with repo scope works regardless.
+          token: ${{ secrets.RELEASE_TOKEN }}
 
   publish:
     runs-on: ubuntu-latest
