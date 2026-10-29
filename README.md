@@ -227,6 +227,15 @@ Runnable examples live in [`examples/`](examples): [CRUD](examples/01-crud),
 - [ ] Proxy header rules & per-tenant cassettes
 - [ ] Docker image & VS Code extension
 
+## Sibling project: tapedeck
+
+Same tape metaphor, different layer. [tapedeck](https://github.com/EAnge1o/tapedeck) is a
+flight recorder for **LLM agents**: record every model/tool call of a run once (JSONL),
+replay it offline forever for free, and diff two runs to find the first drifted step.
+mocktape records **HTTP traffic** for frontend/integration tests; tapedeck records
+**agent decisions** for regression testing LLM features. If the flows you mock end up
+calling a model, use both.
+
 ## Contributing
 
 PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports with a minimal
