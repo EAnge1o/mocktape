@@ -1,0 +1,29 @@
+name: publish
+
+# Publish to npm on a version tag. Uses npm trusted publishing (OIDC,
+# --provenance) -- no token in secrets. One-time setup on npmjs.com:
+# account settings -> Trusted Publishing -> register package `mocktape`,
+# owner EAnge1o, repo mocktape, workflow publish.yml, environment npm.
+# (Alternatively run `npm publish` once locally to create the package;
+# afterwards tags publish through this workflow.)
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm publish --provenance --access public
