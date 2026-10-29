@@ -1,6 +1,6 @@
 {
   "name": "mocktape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mock API server for frontend and integration testing: declarative CRUD from one file, record & replay real APIs as cassettes, fault injection, and a live traffic dashboard.",
   "license": "MIT",
   "author": "Mocktape contributors",
