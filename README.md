@@ -47,7 +47,7 @@ npx mocktape init && npx mocktape dev
 
 json-server is archived and stops at CRUD. WireMock is powerful but lives on the
 JVM. mocktape is the modern TypeScript middle ground: **stateful mocks, a tape
-recorder, chaos engineering, and a dashboard — in one 20 MB npm package.**
+recorder, chaos engineering, and a dashboard — in one 75 kB npm package.**
 
 ## Quick start
 
