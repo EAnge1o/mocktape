@@ -183,9 +183,9 @@ flowchart LR
 - [ ] `mocktape diff` —— 对比真实 API 与磁带的漂移
 - [ ] Docker 镜像与 VS Code 插件
 
-## 姊妹项目：tapedeck
+## 磁带三件套
 
-同样的磁带隐喻，不同的层次。[tapedeck](https://github.com/EAnge1o/tapedeck) 是给 **LLM Agent** 用的飞行记录仪：把一次运行里的每次模型/工具调用录成 JSONL，之后离线免费重放，并用 diff 找出第一个漂移的步骤。mocktape 录制 **HTTP 流量**服务前端/集成测试，tapedeck 录制 **agent 决策**服务 LLM 功能的回归测试——如果你 mock 的流程背后会调模型，两个一起用。
+同样的磁带隐喻，不同的层次。[tapedeck](https://github.com/EAnge1o/tapedeck) 是给 **LLM Agent** 用的飞行记录仪：把一次运行里的每次模型/工具调用录成 JSONL，之后离线免费重放，并用 diff 找出第一个漂移的步骤。[mcptape](https://github.com/EAnge1o/mcptape) 对 **MCP 工具协议边界**做同样的事：包住任意 MCP server，离线重放，diff 漂移。mocktape 录制 **HTTP 流量**，tapedeck 录制 **agent 决策**——如果你 mock 的流程背后会调模型或 MCP 工具，三个一起用。
 
 ## 参与贡献
 
