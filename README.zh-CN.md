@@ -5,7 +5,7 @@
 **一个配置文件模拟整套 API。录制真实接口,随时随地离线回放。**
 
 [![CI](https://github.com/EAnge1o/mocktape/actions/workflows/ci.yml/badge.svg)](https://github.com/EAnge1o/mocktape/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/mocktape)](https://www.npmjs.com/package/mocktape)
+[![npm](https://img.shields.io/npm/v/@eange1o/mocktape)](https://www.npmjs.com/package/@eange1o/mocktape)
 [![node](https://img.shields.io/node/v/mocktape)](package.json)
 [![types](https://img.shields.io/badge/types-included-39c5cf)](src/index.ts)
 [![coverage](https://img.shields.io/badge/coverage-85%25-3fb950)](vitest.config.ts)
@@ -24,7 +24,7 @@ CRUD 接口;一次录制即可把任意真实 API 固化成可回放的"磁带";
 `node:http` 上,运行时依赖只有 7 个小包。
 
 ```bash
-npx mocktape init && npx mocktape dev
+npx @eange1o/mocktape init && npx @eange1o/mocktape dev
 ```
 
 ## 它解决什么问题
@@ -40,7 +40,7 @@ mocktape 是 TypeScript 生态里的中间路线:**状态化 Mock + 录制回放
 ## 快速上手
 
 ```bash
-npm i -D mocktape
+npm i -D @eange1o/mocktape
 mocktape init          # 生成 mocktape.json
 mocktape dev           # API 在 :3000 · 面板在 :3001
 ```
